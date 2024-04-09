@@ -6,8 +6,6 @@ package vuelosybilletes;
 
 import java.util.Scanner;
 
-import javax.xml.transform.Source;
-
 /**
  *
  * @author pmira
