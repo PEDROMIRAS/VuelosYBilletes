@@ -6,6 +6,8 @@ package vuelosybilletes;
 
 import java.util.Scanner;
 
+import javax.xml.transform.Source;
+
 /**
  *
  * @author pmira
@@ -111,7 +113,7 @@ public class Menu {
         switch (opcionCliente) { 
 
             case 1:
-                //logica comprar billete
+                menuCompraBillete();
                 break;
             case 2:
              return;
@@ -121,6 +123,40 @@ public class Menu {
             
         }
         
-     }   
-   }
+     } 
+    } 
+     
+     public void menuCompraBillete(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bienvenido a nuestro portal de venta de billetes");
+        System.out.println("Introduzca su nombre:");
+        String nombre = scanner.nextLine();
+        Cliente cliente = new Cliente(nombre);
+        System.out.println("Hola, " + nombre+ "!");
+        
+        
+        while (true) {
+            System.out.println("==== VENTA VUELOS ====");
+            System.out.println("1. Vuelo A318");
+            System.out.println("2. Vuelo A319");
+            System.out.println("3. Vuelo A320");
+            System.out.println("4. Vuelo A321");
+            System.out.println("5. Volver\n");
+            System.out.println("Seleccione una opción:\n ");
+
+            int opcionBillete=scanner.nextInt();
+        switch  (opcionBillete) {
+            case 1:
+            break;
+            case 2:
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+            
+        }
+    }
+}
+
 }

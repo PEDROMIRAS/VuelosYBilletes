@@ -44,7 +44,7 @@ public class Vuelo {
         this.tipoAvion = tipoAvion;
     }
 
-    private int getNumPlazasPorTipoAvion(String tipoAvion) {
+    public int getNumPlazasPorTipoAvion(String tipoAvion) {
         switch (tipoAvion) {
             case "A318":
                 return 150;
@@ -56,6 +56,15 @@ public class Vuelo {
                 return 300;
             default:
                 throw new IllegalArgumentException("Tipo de avión no válido");
+        }
+    }
+    //Plazas para la venta
+    public boolean plazasReservadas(String tipoAvion){
+        if(numPlazas >0){
+            numPlazas--;
+           return true;
+        }else{
+            return false;
         }
     }
 }
