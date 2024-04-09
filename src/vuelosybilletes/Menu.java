@@ -2,17 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package vuelosybilletes;
+
+ 
+/*package vuelosybilletes;
 
 import java.util.Scanner;
+*/
 
 /**
  *
  * @author pmira
  */
-public class Menu {
+/* public class Menu {
     Scanner scanner = new Scanner(System.in);
     Agencia agencia = new Agencia();
+    
     public static  void mostrarMenuPrincipal() 
     {
         System.out.println("=== MENÚ PRINCIPAL ===");
@@ -53,7 +57,6 @@ public class Menu {
         while(true){
             Scanner scanner = new Scanner(System.in);
             
-
             System.out.println("==== MENU VUELO ====");
             System.out.println("1. Crear vuelo A318");
             System.out.println("2. Crear vuelo A319");
@@ -145,16 +148,36 @@ public class Menu {
             int opcionBillete=scanner.nextInt();
         switch  (opcionBillete) {
             case 1:
+            System.out.println("Indique el numero de plazas que desea comprar: ");
+            int plazas318 = scanner.nextInt();
+            VueloAirbusA318Factory vueloA318 = new VueloAirbusA318Factory();
+            comprarBillete(cliente, vueloA318, plazas318);
             break;
+            
             case 2:
+            System.out.println("Indique el numero de plazas que desea comprar: ");
+            int plazas319 = scanner.nextInt();
+            VueloAirbusA319Factory vueloA319 = new VueloAirbusA319Factory();
+            comprarBillete(cliente, vueloA318, plazas319);
             break;
+
             case 3:
+            System.out.println("Indique el numero de plazas que desea comprar: ");
+            int plazas320 = scanner.nextInt();
+            VueloAirbusA319Factory vueloA320 = new VueloAirbusA319Factory();
+            comprarBillete(cliente, vueloA320, plazas320);
             break;
+            
             case 4:
+            System.out.println("Indique el numero de plazas que desea comprar: ");
+            int plazas321 = scanner.nextInt();
+            VueloAirbusA319Factory vueloA321 = new VueloAirbusA319Factory();
+            comprarBillete(cliente, vueloA321, plazas321);
             break;
             
         }
     }
 }
 
-}
+}*/
+

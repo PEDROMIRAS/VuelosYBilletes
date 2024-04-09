@@ -4,6 +4,8 @@
  */
 package vuelosybilletes;
 
+import java.util.List;
+
 /**
  *
  * @author pmira
@@ -13,10 +15,12 @@ public class Vuelo {
     private int numPlazas;
     private String tipoAvion;
 
+    public List<Vuelo> vuelosCreados;
+
     public Vuelo(int id, String tipoAvion, int numPlazas) {
         this.id = id;
         this.tipoAvion = tipoAvion;
-        this.numPlazas = getNumPlazasPorTipoAvion(tipoAvion);
+        this.numPlazas = numPlazas; 
        
     }
 
@@ -44,20 +48,12 @@ public class Vuelo {
         this.tipoAvion = tipoAvion;
     }
 
-    public int getNumPlazasPorTipoAvion(String tipoAvion) {
-        switch (tipoAvion) {
-            case "A318":
-                return 150;
-            case "A319":
-                return 200;
-            case "A320":
-                return 250;
-            case "A321":
-                return 300;
-            default:
-                throw new IllegalArgumentException("Tipo de avión no válido");
-        }
+     
+    public void crearVuelo(VueloFactory factory) {
+        Vuelo vuelo = factory.crearVuelo();
+        vuelosCreados.add(vuelo);
     }
+
     //Plazas para la venta
     public boolean plazasReservadas(String tipoAvion){
         if(numPlazas >0){

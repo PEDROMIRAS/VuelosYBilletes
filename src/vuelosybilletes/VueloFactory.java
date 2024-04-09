@@ -9,5 +9,6 @@ package vuelosybilletes;
  * @author pmira
  */
 public interface VueloFactory {
+    
     Vuelo crearVuelo();
 }

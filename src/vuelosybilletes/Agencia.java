@@ -12,18 +12,13 @@ import java.util.List;
  * @author pmira
  */
 public class Agencia {
-    private List<Vuelo> vuelosCreados;
-
+    public List<Vuelo> vuelosCreados;
+    
     public Agencia() {
         vuelosCreados = new ArrayList<>();
     }
-
-    public void crearVuelo(VueloFactory factory) {
-        Vuelo vuelo = factory.crearVuelo();
-        vuelosCreados.add(vuelo);
-    }
-
     public List<Vuelo> obtenerVuelos() {
         return vuelosCreados;
     }
+    
 }
