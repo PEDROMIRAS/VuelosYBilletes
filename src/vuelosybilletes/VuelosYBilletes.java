@@ -132,10 +132,6 @@ public class VuelosYBilletes {
 
     public static void menuCompraBillete() {
         System.out.println("Bienvenido a nuestro portal de venta de billetes");
-        System.out.println("Introduzca su nombre: ");
-        String nombre = scanner.nextLine();
-        System.out.println("Hola, " + nombre + "!");
-
         while (true) {
             System.out.println("==== VENTA VUELOS ====");
             System.out.println("1. Vuelo A318");
@@ -146,34 +142,29 @@ public class VuelosYBilletes {
             System.out.println("Seleccione una opción:\n ");
 
             int opcionBillete = scanner.nextInt();
-            int id=scanner.nextInt();
             switch (opcionBillete) {
                 case 1:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas318 = scanner.nextInt();
-                    VueloAirbusA318Factory vueloA318 = new VueloAirbusA318Factory();
-                    cliente.comprarBillete();
+                    cliente.comprarBillete(vuelo, plazas318);
                     break;
 
                 case 2:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas319 = scanner.nextInt();
-                    VueloAirbusA319Factory vueloA319 = new VueloAirbusA319Factory();
-                    cliente.comprarBillete();
+                    cliente.comprarBillete(vuelo, plazas319);
                     break;
 
                 case 3:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas320 = scanner.nextInt();
-                    VueloAirbusA320Factory vueloA320 = new VueloAirbusA320Factory();
-                    cliente.comprarBillete();
+                    cliente.comprarBillete(vuelo, plazas320);
                     break;
 
                 case 4:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas321 = scanner.nextInt();
-                    VueloAirbusA321Factory vueloA321 = new VueloAirbusA321Factory();
-                    cliente.comprarBillete();
+                    cliente.comprarBillete(vuelo, plazas321);
                     break;
 
                 case 5:

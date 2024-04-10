@@ -11,10 +11,14 @@ package vuelosybilletes;
  * @author pmira
  */
 public class Vuelo {
-    Vuelo(){};
+    
+    private int numPlazas;
+
+    Vuelo(){}
+    
     /*
     protected int id;
-    private int numPlazas;
+   
     private String tipoAvion;
 
     public List<Vuelo> vuelosCreados;
@@ -34,14 +38,6 @@ public class Vuelo {
         this.id = id;
     }
 
-    public int getNumPlazas() {
-        return numPlazas;
-    }
-
-    public void setNumPlazas(int numPlazas) {
-        this.numPlazas = numPlazas;
-    }
-
     public String getTipoAvion() {
         return tipoAvion;
     }
@@ -56,7 +52,13 @@ public class Vuelo {
         System.out.println("El numero de plazas del avion es :");
         
     }
-    /* 
+
+    public void setNumPlazas(int numPlazas) {
+        this.numPlazas = numPlazas;
+    }
+    public int getNumPlazas() {
+        return numPlazas;
+    }
     //Plazas para la venta
     public boolean plazasReservadas(String tipoAvion){
         if(numPlazas >0){
@@ -65,7 +67,7 @@ public class Vuelo {
         }else{
             return false;
         }
-    }*/
+    }
 
 
 }

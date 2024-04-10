@@ -12,9 +12,9 @@ class VueloAirbusA320Factory extends Vuelo {
 
     public VueloAirbusA320Factory(){}
 
-    int id=3;
-    String tipoAvion="Airbus A320";
-    int numPlazas=200;
+    static int id=3;
+    static String tipoAvion="Airbus A320";
+    static int numPlazas=200;
     @Override
     public void datosVuelo(){
         

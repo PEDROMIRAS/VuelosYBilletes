@@ -11,15 +11,15 @@ public class VueloAirbusA318Factory extends Vuelo {
     
     
     public VueloAirbusA318Factory() {}
-    int id=1;
-    String tipoAvion="Airbus A318";
-    int numPlazas=100;
+    static int id=1;
+    static String tipoAvion="Airbus A318";
+    static int numPlazas=100;
     @Override
     public void datosVuelo(){
         
-        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("\nEl ID del vuelo es: "+id);
         System.out.println("El tipo de avion es: "+tipoAvion);
-        System.out.println("El numero de plazas del avion es: "+numPlazas);
+        System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
     }
     /* @Override
     public Vuelo crearVuelo() {

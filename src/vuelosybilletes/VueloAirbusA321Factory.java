@@ -12,14 +12,14 @@ class VueloAirbusA321Factory extends Vuelo{
     
     public VueloAirbusA321Factory(){}
 
-    int id=4;
-    String tipoAvion="Airbus A321";
-    int numPlazas=250;
+    static int id=4;
+    static String tipoAvion="Airbus A321";
+    static int numPlazas=250;
     @Override
     public void datosVuelo(){
         
-        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("\nEl ID del vuelo es: "+id);
         System.out.println("El tipo de avion es: "+tipoAvion);
-        System.out.println("El numero de plazas del avion es: "+numPlazas);
+        System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
     }
 }
