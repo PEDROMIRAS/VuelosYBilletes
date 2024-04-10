@@ -6,10 +6,8 @@ public class CreadorVueloConcreto extends CreadorVuelo{
     int id;
     int numPlazas;
 
-    public CreadorVueloConcreto(String tipoAvion, int id, int numPlazas){
-        this.tipoAvion = tipoAvion;
-        this.id = id;
-        this.numPlazas = numPlazas;
+    public CreadorVueloConcreto(String t){
+        tipoAvion = t;
     }
 
     @Override

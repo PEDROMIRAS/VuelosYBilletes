@@ -75,38 +75,32 @@ public class VuelosYBilletes {
     public static void menuVuelo() {
         while (true) {
             System.out.println("==== MENU VUELO ====");
-            System.out.println("1. Crear vuelo A318");
-            System.out.println("2. Crear vuelo A319");
-            System.out.println("3. Crear vuelo A320");
-            System.out.println("4. Crear vuelo A321");
-            System.out.println("5. Volver\n");
-            System.out.println("Seleccione una opción:\n ");
+            System.out.println("1.Tipo de acion");
+            System.out.println("2.Volver\n");
+            System.out.println("Seleccione una opcion:");
 
-            int opcionVuelo = scanner.nextInt();
+            int opcionVuelo =scanner.nextInt();
 
             switch (opcionVuelo) {
                 case 1:
-                    vuelo.crearVuelo(new VueloAirbusA318Factory(opcionVuelo, null, opcionVuelo));
-                    System.out.println("Vuelo con avion Airbus A318 creado\n");
+                    String t;
+                    Vuelo v;
+                    System.out.println("Indique el tipo de avion para el vuelo:");
+                    t=scanner.nextLine();
+
+                    CreadorVuelo miVuelo=new CreadorVueloConcreto(t);
+                    v=miVuelo.crearVuelo();
+                    v.datosVuelo();
                     break;
                 case 2:
-                    vuelo.crearVuelo(new VueloAirbusA319Factory(opcionVuelo, null, opcionVuelo));
-                    System.out.println("Vuelo con avion Airbus A319 creado\n");
-                    break;
-                case 3:
-                    vuelo.crearVuelo(new VueloAirbusA320Factory(opcionVuelo, null, opcionVuelo));
-                    System.out.println("Vuelo con avion Airbus A320 creado\n");
-                    break;
-                case 4:
-                    vuelo.crearVuelo(new VueloAirbusA321Factory(opcionVuelo, null, opcionVuelo));
-                    System.out.println("Vuelo con avion Airbus A321 creado\n");
-                    break;
-                case 5:
-
                     return;
+
                 default:
-                    System.out.println("Opción no válida. Por favor, introduzca una opción válida.\n");
+                    break;
             }
+            
+
+            
         }
 
     }

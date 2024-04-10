@@ -11,7 +11,7 @@ import java.util.List;
  * @author pmira
  */
 public class Vuelo {
-    public int id;
+    protected int id;
     private int numPlazas;
     private String tipoAvion;
 
