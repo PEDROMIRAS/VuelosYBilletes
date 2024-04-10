@@ -18,9 +18,9 @@ class VueloAirbusA319Factory extends Vuelo {
     @Override
     public void datosVuelo(){
         
-        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("\nEl ID del vuelo es: "+id);
         System.out.println("El tipo de avion es: "+tipoAvion);
-        System.out.println("El numero de plazas del avion es: "+numPlazas);
+        System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
     }
     
 }

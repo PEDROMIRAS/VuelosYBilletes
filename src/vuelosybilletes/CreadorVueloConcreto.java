@@ -3,7 +3,7 @@ package vuelosybilletes;
 public class CreadorVueloConcreto extends CreadorVuelo{
 
     String tipoAvion;
-    
+
     public CreadorVueloConcreto(String v){
         tipoAvion=v;
     }
@@ -11,16 +11,16 @@ public class CreadorVueloConcreto extends CreadorVuelo{
     @Override
     public Vuelo crearVuelo(){
         
-        if (tipoAvion.equalsIgnoreCase("Airbus A318"))
+        if (tipoAvion.equalsIgnoreCase("AirbusA318"))
         { 
           return new VueloAirbusA318Factory(); 
-        }else if (tipoAvion.equalsIgnoreCase("Airbus A319")) 
+        }else if (tipoAvion.equalsIgnoreCase("AirbusA319")) 
         {
          return new VueloAirbusA319Factory();  
-        }else if (tipoAvion.equalsIgnoreCase("Airbus A320")) 
+        }else if (tipoAvion.equalsIgnoreCase("AirbusA320")) 
         {
           return new VueloAirbusA320Factory();  
-        }else if (tipoAvion.equalsIgnoreCase("Airbus A321"))
+        }else if (tipoAvion.equalsIgnoreCase("AirbusA321"))
         {
          return new VueloAirbusA321Factory();   
         }else {

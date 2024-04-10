@@ -21,10 +21,5 @@ public class VueloAirbusA318Factory extends Vuelo {
         System.out.println("El tipo de avion es: "+tipoAvion);
         System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
     }
-    /* @Override
-    public Vuelo crearVuelo() {
-        return new Vuelo(1, "A318", 150);
-    }*/
-    
     
 }
