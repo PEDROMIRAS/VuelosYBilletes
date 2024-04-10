@@ -8,25 +8,21 @@ package vuelosybilletes;
  *
  * @author pmira
  */
-class VueloAirbusA321Factory implements VueloFactory {
-    private static VueloAirbusA321Factory instance;
-    private int id = 0;
-
-    public VueloAirbusA321Factory(){
-
+class VueloAirbusA321Factory extends Vuelo{
+    
+    public VueloAirbusA321Factory(int id, String tipoAvion, int numPlazas) {
+        super(id, tipoAvion, numPlazas);
+        
     }
 
-    public static VueloAirbusA321Factory getInstance(){
-        if (instance == null) {
-            instance = new VueloAirbusA321Factory();
-        }
-        return instance;
-    }
+    int id=4;
+    String tipoAvion="Airbus A321";
+    int numPlazas=250;
     @Override
-    public Vuelo crearVuelo() {
-        return new Vuelo(++id, "A321", 300); // Se asigna una capacidad de 300 plazas por defecto
-    }
-    public void resetId(){
-        id=0;
+    public void datosVuelo(){
+        
+        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("El tipo de avion es: "+tipoAvion);
+        System.out.println("El numero de plazas del avion es: "+numPlazas);
     }
 }

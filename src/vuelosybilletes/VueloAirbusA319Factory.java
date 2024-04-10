@@ -8,23 +8,22 @@ package vuelosybilletes;
  *
  * @author pmira
  */
-class VueloAirbusA319Factory implements VueloFactory {
-    private static VueloAirbusA319Factory instance;
-    private int id = 0;
+class VueloAirbusA319Factory extends Vuelo {
+    
+    public VueloAirbusA319Factory(int id, String tipoAvion, int numPlazas) {
+        super(id, tipoAvion, numPlazas);
+       
+    }
 
-    public VueloAirbusA319Factory() {
-    }
- public static VueloAirbusA319Factory getInstance() {
-    if (instance == null) {
-        instance = new VueloAirbusA319Factory();
-    }
-     return instance;    
-    }
+    int id=2;
+    String tipoAvion="Airbus A319";
+    int numPlazas=150;
     @Override
-    public Vuelo crearVuelo() {
-        return new Vuelo(++id, "A319", 200); // Se asigna una capacidad de 200 plazas por defecto
+    public void datosVuelo(){
+        
+        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("El tipo de avion es: "+tipoAvion);
+        System.out.println("El numero de plazas del avion es: "+numPlazas);
     }
-    public void resetId(){
-        id=0;
-    }
+    
 }

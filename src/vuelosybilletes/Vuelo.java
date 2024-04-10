@@ -11,7 +11,7 @@ import java.util.List;
  * @author pmira
  */
 public class Vuelo {
-    private int id;
+    public int id;
     private int numPlazas;
     private String tipoAvion;
 
@@ -48,12 +48,13 @@ public class Vuelo {
         this.tipoAvion = tipoAvion;
     }
 
-     
-    public void crearVuelo(VueloFactory factory) {
-        Vuelo vuelo = factory.crearVuelo();
-        vuelosCreados.add(vuelo);
+    public void datosVuelo(){
+        System.out.println("El ID del vuelo es:");
+        System.out.println("El tipo de avion es :");
+        System.out.println("El numero de plazas del avion es :");
+        
     }
-
+    /* 
     //Plazas para la venta
     public boolean plazasReservadas(String tipoAvion){
         if(numPlazas >0){
@@ -62,5 +63,7 @@ public class Vuelo {
         }else{
             return false;
         }
-    }
+    }*/
+
+
 }

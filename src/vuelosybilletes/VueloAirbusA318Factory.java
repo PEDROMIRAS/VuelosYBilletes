@@ -7,25 +7,26 @@ package vuelosybilletes;
  *
  * @author pmira
  */
-public class VueloAirbusA318Factory implements VueloFactory {
-    private static VueloAirbusA318Factory instance;
-    private int id = 0;
-
-    public VueloAirbusA318Factory() {
-    }
-    public static VueloAirbusA318Factory getInstance() {
-        if (instance == null) {
-            instance = new VueloAirbusA318Factory();
-        }
-        return instance;
-    }
-
-    @Override
-    public Vuelo crearVuelo() {
-        return new Vuelo(++id, "A318", 150);
-    }
+public class VueloAirbusA318Factory extends Vuelo {
     
-    public void resetId() {
-        id = 0;
+    public VueloAirbusA318Factory(int id, String tipoAvion, int numPlazas) {
+        super(id, tipoAvion, numPlazas);
+        
     }
+    int id=1;
+    String tipoAvion="Airbus A318";
+    int numPlazas=100;
+    @Override
+    public void datosVuelo(){
+        
+        System.out.println("El ID del vuelo es: "+id);
+        System.out.println("El tipo de avion es: "+tipoAvion);
+        System.out.println("El numero de plazas del avion es: "+numPlazas);
+    }
+    /* @Override
+    public Vuelo crearVuelo() {
+        return new Vuelo(1, "A318", 150);
+    }*/
+    
+    
 }
