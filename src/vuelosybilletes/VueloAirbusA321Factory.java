@@ -10,10 +10,7 @@ package vuelosybilletes;
  */
 class VueloAirbusA321Factory extends Vuelo{
     
-    public VueloAirbusA321Factory(int id, String tipoAvion, int numPlazas) {
-        super(id, tipoAvion, numPlazas);
-        
-    }
+    public VueloAirbusA321Factory(){}
 
     int id=4;
     String tipoAvion="Airbus A321";

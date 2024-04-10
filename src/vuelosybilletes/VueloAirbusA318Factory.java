@@ -9,9 +9,9 @@ package vuelosybilletes;
  */
 public class VueloAirbusA318Factory extends Vuelo {
     
-    public VueloAirbusA318Factory(int id, String tipoAvion, int numPlazas) {
-        super(id, tipoAvion, numPlazas);
-        
+    
+    public VueloAirbusA318Factory() {
+        //TODO Auto-generated constructor stub
     }
     int id=1;
     String tipoAvion="Airbus A318";

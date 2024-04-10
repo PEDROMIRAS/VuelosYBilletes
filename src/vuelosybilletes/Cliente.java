@@ -12,7 +12,8 @@ public class Cliente{
         this.nombre=nombre;
         billete= new ArrayList<>();
     }
-
+    public void comprarBillete(){}
+ /* 
     public void comprarBillete(Cliente cliente ,Vuelo vuelo, int numPlazas) {
         // Comprobar si el vuelo tiene suficientes plazas disponibles
         if (vuelo.getNumPlazas() < numPlazas) {
@@ -32,6 +33,8 @@ public class Cliente{
     public Vuelo getVuelo(){
         return vueloActual;
     }
+    */
+
     /*
      * @Override
     public void comprarBillete(Cliente cliente ,VueloFactory vueloFactory, int numPlazas) {
