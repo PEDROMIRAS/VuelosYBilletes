@@ -17,16 +17,16 @@ public class CreadorVueloConcreto extends CreadorVuelo{
         
         if (tipoAvion.equalsIgnoreCase("Airbus A318"))
         { 
-          return new VueloAirbusA318Factory(id, tipoAvion, id); 
+          return new VueloAirbusA318Factory(id, tipoAvion, numPlazas); 
         }else if (tipoAvion.equalsIgnoreCase("Airbus A319")) 
         {
-         return new VueloAirbusA319Factory(id, tipoAvion, id);  
+         return new VueloAirbusA319Factory(id, tipoAvion, numPlazas);  
         }else if (tipoAvion.equalsIgnoreCase("Airbus A320")) 
         {
           return new VueloAirbusA320Factory(id, tipoAvion, id);  
         }else if (tipoAvion.equalsIgnoreCase("Airbus A321"))
         {
-         return new VueloAirbusA321Factory(id, tipoAvion, id);   
+         return new VueloAirbusA321Factory(id, tipoAvion, numPlazas);   
         }else {
             System.out.println("Tipo de avion para vuelo no valido");
             return null;
