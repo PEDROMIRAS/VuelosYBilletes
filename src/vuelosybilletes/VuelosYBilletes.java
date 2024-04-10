@@ -75,7 +75,7 @@ public class VuelosYBilletes {
     public static void menuVuelo() {
         while (true) {
             System.out.println("==== MENU VUELO ====");
-            System.out.println("1.Tipo de acion");
+            System.out.println("1.Tipo de avion");
             System.out.println("2.Volver\n");
             System.out.println("Seleccione una opcion:");
 
@@ -135,7 +135,7 @@ public class VuelosYBilletes {
 
     public static void menuCompraBillete() {
         System.out.println("Bienvenido a nuestro portal de venta de billetes");
-        System.out.println("Introduzca su nombre:");
+        System.out.println("Introduzca su nombre: ");
         String nombre = scanner.nextLine();
         System.out.println("Hola, " + nombre + "!");
 
