@@ -10,9 +10,7 @@ package vuelosybilletes;
 public class VueloAirbusA318Factory extends Vuelo {
     
     
-    public VueloAirbusA318Factory() {
-        //TODO Auto-generated constructor stub
-    }
+    public VueloAirbusA318Factory() {}
     int id=1;
     String tipoAvion="Airbus A318";
     int numPlazas=100;
