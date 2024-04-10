@@ -16,7 +16,7 @@ public class VueloAirbusA318Factory extends Vuelo {
     static int numPlazas=100;
     @Override
     public void datosVuelo(){
-        
+        System.out.println("\nLos datos del vuelo creado son:");
         System.out.println("\nEl ID del vuelo es: "+id);
         System.out.println("El tipo de avion es: "+tipoAvion);
         System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
