@@ -29,7 +29,9 @@ public class CreadorVueloConcreto extends CreadorVuelo{
          return new VueloAirbusA321Factory(id, tipoAvion, id);   
         }else {
             System.out.println("Tipo de avion para vuelo no valido");
+            return null;
         }
+        
 
     }
 }
