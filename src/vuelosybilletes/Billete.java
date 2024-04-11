@@ -1,27 +1,17 @@
 package vuelosybilletes;
 
 public class Billete {
-    private Vuelo vuelo;
-    private int plazas;
-
-    public Billete(Vuelo vuelo, int plazas) {
-        this.vuelo = vuelo;
-        this.plazas = plazas;
+    private String tipoAvion;
+    private int NUM_PLAZAS; 
+     public Billete(String tipoAvion, int NUM_PLAZAS) {
+        this.tipoAvion=tipoAvion;
+        this.NUM_PLAZAS=NUM_PLAZAS;
+    }
+    public String getTipoAvion() {
+        return tipoAvion;
+    }
+    public int getNumPlazas() {
+        return NUM_PLAZAS;
     }
 
-    public Vuelo getVuelo() {
-        return vuelo;
-    }
-
-    public void setVuelo(Vuelo vuelo) {
-        this.vuelo = vuelo;
-    }
-
-    public int getPlazas() {
-        return plazas;
-    }
-
-    public void setPlazas(int plazas) {
-        this.plazas = plazas;
-    }
 }

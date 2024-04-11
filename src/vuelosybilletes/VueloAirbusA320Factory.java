@@ -9,18 +9,23 @@ package vuelosybilletes;
  * @author pmira
  */
 class VueloAirbusA320Factory extends Vuelo {
+    private static int nextId = 1;
+    private static final String TIPO_AVION = "Airbus A320";
+    private static final int NUM_PLAZAS = 200;
+    private int id;
 
-    public VueloAirbusA320Factory(){}
+    public VueloAirbusA320Factory(){
+        this.id = nextId;
+        nextId++;
+    }
 
-    static int id=3;
-    static String tipoAvion="Airbus A320";
-    static int numPlazas=200;
+    
     @Override
     public void datosVuelo(){
         System.out.println("\nLos datos del vuelo creado son:");
         System.out.println("\nEl ID del vuelo es: "+id);
-        System.out.println("El tipo de avion es: "+tipoAvion);
-        System.out.println("El numero de plazas del avion es: "+numPlazas+"\n");
+        System.out.println("El tipo de avion es: "+TIPO_AVION);
+        System.out.println("El numero de plazas del avion es: "+NUM_PLAZAS+"\n");
     }
      
 }

@@ -6,28 +6,21 @@ import java.util.ArrayList;
 
 
 public class Cliente{
-    private final List<Billete> billete;
+    private List<Billete> billetes = new ArrayList<>();
+     public void comprarBillete(Vuelo vuelo, int NUM_PLAZAS){
+        String tipoAvion= vuelo.getTipoAvion();
 
-    public Cliente(String nombre){
-        billete= new ArrayList<>();
+       if (vuelo.getNumPlazas()>= NUM_PLAZAS){
+        vuelo.setNumPlazas(vuelo.getNumPlazas()-NUM_PLAZAS);
+        Billete billete =new Billete(tipoAvion,NUM_PLAZAS);
+        billetes.add(billete);
+       }else{
+        System.out.println("No hay suficientes plazas disponibles");
+       }
     }
-    
-    public void comprarBillete(Vuelo vuelo, int numPlazas) {
-        // Comprobar si el vuelo tiene suficientes plazas disponibles
-        if (vuelo.getNumPlazas() < numPlazas) {
-            System.out.println("No hay suficientes plazas disponibles en este vuelo.");
-            return;
-        }
-
-        // Restar el número de plazas al vuelo
-        vuelo.setNumPlazas(vuelo.getNumPlazas() - numPlazas);
-
-        // Añadir el billete al cliente
-        billete.add(new Billete(vuelo, numPlazas));
-    }
-
-    public List<Billete> getBillete() {
-        return billete;
+    public List<Billete> getBilletes(){
+        return billetes;
     }
 }
+
 

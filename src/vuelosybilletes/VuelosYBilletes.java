@@ -5,6 +5,7 @@
  */
 package vuelosybilletes;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class VuelosYBilletes {
@@ -12,7 +13,7 @@ public class VuelosYBilletes {
     static Scanner scanner = new Scanner(System.in);
     static Agencia agencia = new Agencia();
     static Vuelo vuelo;
-    static Cliente cliente = new Cliente("");
+    static Cliente cliente = new Cliente();
 
     public static void main(String[] args) {
         while (true) {
@@ -97,7 +98,7 @@ public class VuelosYBilletes {
                     return;
                 default:
                     System.out.println("Opción inválida. Por favor, selecciona una opción válida.");
-                    break;
+                    return;
             }
         }
     }
@@ -124,6 +125,7 @@ public class VuelosYBilletes {
 
                 default:
                     System.out.println("Opción no válida. Por favor, introduzca una opción válida.\n");
+                    return;
 
             }
 
@@ -139,32 +141,56 @@ public class VuelosYBilletes {
             System.out.println("3. Vuelo A320");
             System.out.println("4. Vuelo A321");
             System.out.println("5. Volver\n");
-            System.out.println("Seleccione una opción:\n ");
+            System.out.println("Seleccione una opción:");
 
             int opcionBillete = scanner.nextInt();
             switch (opcionBillete) {
                 case 1:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas318 = scanner.nextInt();
-                    cliente.comprarBillete(vuelo, plazas318);
+                    VueloAirbusA318Factory vueloAirbusA318= new VueloAirbusA318Factory();
+                    cliente.comprarBillete(vueloAirbusA318, plazas318);
+
+                    List<Billete> billeteA318 = cliente.getBilletes();
+                    for (Billete billete : billeteA318) {
+                     System.out.println("Billete: " + billete.getTipoAvion() + billete.getNumPlazas() + " plazas");
+}
                     break;
 
                 case 2:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas319 = scanner.nextInt();
-                    cliente.comprarBillete(vuelo, plazas319);
+                    VueloAirbusA319Factory vueloAirbusA319= new VueloAirbusA319Factory();
+                    cliente.comprarBillete(vueloAirbusA319, plazas319);
+
+                    List<Billete> billeteA319 = cliente.getBilletes();
+                    for (Billete billete : billeteA319){
+                     System.out.println("Billete: " + billete.getTipoAvion() + billete.getNumPlazas() + " plazas");
+}
                     break;
 
                 case 3:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas320 = scanner.nextInt();
-                    cliente.comprarBillete(vuelo, plazas320);
+                    VueloAirbusA320Factory vueloAirbusA320= new VueloAirbusA320Factory();
+                    cliente.comprarBillete(vueloAirbusA320, plazas320);
+
+                    List<Billete> billeteA320 = cliente.getBilletes();
+                    for (Billete billete : billeteA320){
+                     System.out.println("Billete: " + billete.getTipoAvion() + billete.getNumPlazas() + " plazas");
+}
                     break;
 
                 case 4:
                     System.out.println("Indique el numero de plazas que desea comprar: ");
                     int plazas321 = scanner.nextInt();
-                    cliente.comprarBillete(vuelo, plazas321);
+                    VueloAirbusA321Factory vueloAirbusA321= new VueloAirbusA321Factory();
+                    cliente.comprarBillete(vueloAirbusA321, plazas321);
+                    
+                    List<Billete> billeteA321 = cliente.getBilletes();
+                    for (Billete billete : billeteA321){
+                     System.out.println("Billete: " + billete.getTipoAvion() + billete.getNumPlazas() + " plazas");
+}
                     break;
 
                 case 5:

@@ -4,6 +4,8 @@
  */
 package vuelosybilletes;
 
+import java.util.List;
+
 //import java.util.List;
 
 /**
@@ -16,7 +18,6 @@ public class Vuelo {
 
     Vuelo(){}
     
-    /*
     protected int id;
    
     private String tipoAvion;
@@ -45,7 +46,7 @@ public class Vuelo {
     public void setTipoAvion(String tipoAvion) {
         this.tipoAvion = tipoAvion;
     }
-*/
+
     public void datosVuelo(){
         System.out.println("El ID del vuelo es:");
         System.out.println("El tipo de avion es :");
