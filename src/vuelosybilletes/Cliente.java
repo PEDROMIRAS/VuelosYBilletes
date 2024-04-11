@@ -22,6 +22,28 @@ if (vuelo.isAgenciaCreadora("Vuelos Murcia")) {
     }
        
     }
+    public void devolverBilletes(String tipoAvion, int NUM_PLAZAS) {
+        int numBilletesComprados = 0;
+        for (Billete billete : billetes) {
+            if (billete.getTipoAvion().equals(tipoAvion)) {
+                numBilletesComprados += billete.getNumPlazas();
+            }
+        }
+        if (numBilletesComprados >= NUM_PLAZAS) {
+            for (int i = 0; i < NUM_PLAZAS; i++) {
+                for (int j = 0; j < billetes.size(); j++) {
+                    Billete billete = billetes.get(j);
+                    if (billete.getTipoAvion().equals(tipoAvion)) {
+                        billetes.remove(j);
+                        break;
+                    }
+                }
+            }
+        } else {
+            System.out.println("No se pueden devolver " + NUM_PLAZAS + " billetes porque solo se han comprado " + numBilletesComprados + " billetes de ese tipo de avión.");
+        }
+    }
+
     public List<Billete> getBilletes(){
         return billetes;
     }
