@@ -8,8 +8,6 @@ public class Cliente{
     private List<Billete> billetes = new ArrayList<>();
      public void comprarBillete(Vuelo vuelo, int NUM_PLAZAS){
         String tipoAvion= vuelo.getTipoAvion();
-
-       if (vuelo.getNumPlazas()>= NUM_PLAZAS){
 if (vuelo.isAgenciaCreadora("Vuelos Murcia")) {
     if (vuelo.getNumPlazas()>= NUM_PLAZAS){
         vuelo.setNumPlazas(vuelo.getNumPlazas()-NUM_PLAZAS);
@@ -20,11 +18,14 @@ if (vuelo.isAgenciaCreadora("Vuelos Murcia")) {
        }
     }else {
     System.out.println("El vuelo no ha sido creado por la agencia");
-     }
+    }
        
+    }
+
     public List<Billete> getBilletes(){
         return billetes;
     }
-}
+  }
+
 
 
