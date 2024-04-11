@@ -23,7 +23,7 @@ public class Vuelo {
     private String tipoAvion;
 
     public List<Vuelo> vuelosCreados;
-    private String agenciaCreadora;
+    private String agenciaCreadora="Vuelos Murcia";
      
     public Vuelo(int id, String tipoAvion, int numPlazas, String agenciaCreadora) {
         this.id = id;
@@ -64,7 +64,7 @@ public class Vuelo {
         return agenciaCreadora;
     }
     public void setAgenciaCreadora(String agenciaCreadora) {
-        this.agenciaCreadora="Vuelos Murcia";
+        this.agenciaCreadora=agenciaCreadora;
     }
     public boolean isAgenciaCreadora(String agencia) {
         return agenciaCreadora.equals(agencia);
