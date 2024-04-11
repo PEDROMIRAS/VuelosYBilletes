@@ -14,23 +14,30 @@ import java.util.List;
  */
 public class Vuelo {
     
-    private int numPlazas;
+    private int NUM_PLAZAS = 0;
 
-    Vuelo(){}
+    public Vuelo(){}
     
     protected int id;
    
     private String tipoAvion;
 
     public List<Vuelo> vuelosCreados;
+    private String agenciaCreadora;
      
-    public Vuelo(int id, String tipoAvion, int numPlazas) {
+    public Vuelo(int id, String tipoAvion, int numPlazas, String agenciaCreadora) {
         this.id = id;
         this.tipoAvion = tipoAvion;
-        this.numPlazas = numPlazas; 
+        this.NUM_PLAZAS = numPlazas;
+        this.agenciaCreadora = agenciaCreadora; 
        
     }
-
+    public void datosVuelo(){
+        System.out.println("El ID del vuelo es:");
+        System.out.println("El tipo de avion es :");
+        System.out.println("El numero de plazas del avion es :");
+        
+    }
     public int getId() {
         return id;
     }
@@ -47,23 +54,22 @@ public class Vuelo {
         this.tipoAvion = tipoAvion;
     }
 
-    public void datosVuelo(){
-        System.out.println("El ID del vuelo es:");
-        System.out.println("El tipo de avion es :");
-        System.out.println("El numero de plazas del avion es :");
-        
-    }
-
     public void setNumPlazas(int numPlazas) {
-        this.numPlazas = numPlazas;
+        this.NUM_PLAZAS = numPlazas;
     }
     public int getNumPlazas() {
-        return numPlazas;
+        return NUM_PLAZAS;
+    }
+    public String getAgenciaCreadora(){
+        return agenciaCreadora;
+    }
+    public boolean isAgenciaCreadora(String agencia) {
+        return agenciaCreadora.equals(agencia);
     }
     //Plazas para la venta
     public boolean plazasReservadas(String tipoAvion){
-        if(numPlazas >0){
-            numPlazas--;
+        if(NUM_PLAZAS >0){
+            NUM_PLAZAS--;
            return true;
         }else{
             return false;
