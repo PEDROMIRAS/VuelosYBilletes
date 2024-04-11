@@ -33,9 +33,9 @@ public class Vuelo {
        
     }
     public void datosVuelo(){
-        System.out.println("El ID del vuelo es:");
-        System.out.println("El tipo de avion es :");
-        System.out.println("El numero de plazas del avion es :");
+        System.out.println("El ID del vuelo es: ");
+        System.out.println("El tipo de avion es: ");
+        System.out.println("El numero de plazas del avion es: ");
         
     }
     public int getId() {
@@ -62,6 +62,9 @@ public class Vuelo {
     }
     public String getAgenciaCreadora(){
         return agenciaCreadora;
+    }
+    public void setAgenciaCreadora(String agenciaCreadora) {
+        this.agenciaCreadora="Vuelos Murcia";
     }
     public boolean isAgenciaCreadora(String agencia) {
         return agenciaCreadora.equals(agencia);

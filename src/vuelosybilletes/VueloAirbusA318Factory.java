@@ -19,7 +19,7 @@ public class VueloAirbusA318Factory extends Vuelo {
     public VueloAirbusA318Factory() {
         this.id = nextId;
         nextId++;
-        this.vuelo = new Vuelo(this.id, TIPO_AVION, NUM_PLAZAS,"Vuelos Murcia");
+        this.vuelo = new Vuelo(this.id, TIPO_AVION, NUM_PLAZAS,getAgenciaCreadora());
 
     }
 
@@ -28,7 +28,8 @@ public class VueloAirbusA318Factory extends Vuelo {
         System.out.println("\nLos datos del vuelo creado son:");
         System.out.println("\nEl ID del vuelo es: " + id);
         System.out.println("El tipo de avion es: " + TIPO_AVION);
-        System.out.println("El numero de plazas del avion es: " + NUM_PLAZAS + "\n");
+        System.out.println("El numero de plazas del avion es: " + NUM_PLAZAS);
+        System.out.println("La agencia creadora del vuelo es:"+getAgenciaCreadora() + "\n");
     }
     public Vuelo getVuelo(){
         return vuelo;

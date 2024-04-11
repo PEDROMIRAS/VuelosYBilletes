@@ -1,16 +1,19 @@
 package vuelosybilletes;
 
+import java.util.Scanner;
+
 public class CreadorVueloConcreto extends CreadorVuelo{
 
     String tipoAvion;
-
+    Scanner scanner = new Scanner(System.in);
     public CreadorVueloConcreto(String v){
         tipoAvion=v;
     }
 
     @Override
     public Vuelo crearVuelo(){
-        
+       
+       
         if (tipoAvion.equalsIgnoreCase("AirbusA318"))
         { 
           return new VueloAirbusA318Factory(); 
