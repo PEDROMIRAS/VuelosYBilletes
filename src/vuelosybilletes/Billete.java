@@ -13,5 +13,4 @@ public class Billete {
     public int getNumPlazas() {
         return NUM_PLAZAS;
     }
-
 }

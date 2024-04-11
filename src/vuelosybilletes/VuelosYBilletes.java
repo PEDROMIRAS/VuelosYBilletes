@@ -104,42 +104,7 @@ public class VuelosYBilletes {
     }
 
     public static void menuDevolver() {
-        while (true) {
-            System.out.println("Menú:");
-            System.out.println("1. Devolver billetes de avión A318");
-            System.out.println("2. Devolver billetes de avión A319");
-            System.out.println("3. Devolver billetes de avión A320");
-            System.out.println("4. Devolver billetes de avión A321");
-            System.out.println("5. Volver\n");
-            System.out.println("Seleccione una opcion:");
-            int opcionDevolver = scanner.nextInt();
-            switch (opcionDevolver) {
-                case 1:
-                    System.out.println("Introduce el número de billetes a devolver:");
-                    int numBilletesA318 = scanner.nextInt();
-                    cliente.devolverBilletes("AirbusA318", numBilletesA318);
-                    break;
-                case 2:
-                    System.out.println("Introduce el número de billetes a devolver:");
-                    int numBilletesA319 = scanner.nextInt();
-                    cliente.devolverBilletes("AirbusA319", numBilletesA319);
-                    break;
-                case 3:
-                    System.out.println("Introduce el número de billetes a devolver:");
-                    int numBilletesA320 = scanner.nextInt();
-                    cliente.devolverBilletes("AirbusA320", numBilletesA320);
-                    break;
-                case 4:
-                    System.out.println("Introduce el número de billetes a devolver:");
-                    int numBilletesA321 = scanner.nextInt();
-                    cliente.devolverBilletes("AirbusA321", numBilletesA321);
-                    break;
-                case 5:
-                    return;
-                default:
-                    System.out.println("Opción no válida. Introduce una opción entre 1 y 5.");
-            }
-        }
+        
     }
 
     public static void menuCliente() {
