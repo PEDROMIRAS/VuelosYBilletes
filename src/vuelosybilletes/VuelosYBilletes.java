@@ -1,4 +1,3 @@
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -153,7 +152,7 @@ public class VuelosYBilletes {
                     VueloAirbusA318Factory vueloAirbusA318Factory = new VueloAirbusA318Factory();
                     Vuelo vueloAirbusA318 = vueloAirbusA318Factory.getVuelo();
                     cliente.comprarBillete(vueloAirbusA318, plazas318);
-
+//esto no furula
                     List<Billete> billeteA318 = cliente.getBilletes();
                     for (Billete billete : billeteA318) {
                      System.out.println("Billete: " + billete.getTipoAvion()+" "+ billete.getNumPlazas() + " plazas");
